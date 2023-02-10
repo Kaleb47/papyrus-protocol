@@ -1,58 +1,70 @@
-# dGrants Frontend Application
+# Getting Started with Create React App
 
-Ethereum frontend app built with the following stack:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- [Vue 3](https://v3.vuejs.org/) as the foundation
-- [Tailwind CSS](https://tailwindcss.com) for styling
-- [Ethers](https://docs.ethers.io/v5/single-page/) for interacting with Ethereum
-- [Vite](https://vitejs.dev/) for 10x-100x faster builds
-- [Onboard](https://docs.blocknative.com/onboard) for connecting wallets
-- [Multicall2](https://github.com/makerdao/multicall) for polling for data each block
+## Available Scripts
 
-## Setup
+In the project directory, you can run:
 
-Install MetaMask and configure it with the default Hardhat mnemonic of `test test test test test test test test test test test junk`.
-If you already have MetaMask installed, it may be easier to create a new browser profile called "Hardhat" so you can configure MetaMask with this mnemonic without affecting your existing MetaMask installation.
+### `npm start`
 
-Then, add a network to MetaMask with the following information:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- Name: Hardhat
-- New RPC URL: http://127.0.0.1:8545
-- Chain ID: 31337
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-This configuration is required to ensure your account is funded with tokens for testing.
-When you rebuild the app, you'll likely need to reset MetaMask so the nonces match what the local network expects.
-You can do this in MetaMask by clicking the circle in the top right > Settings > Advanced > Reset Account.
+### `npm test`
 
-Set `DGRANTS_CHAIN_ID` to the chain ID containing the set of dGrants contracts to use.
-This chain ID will be the only supported network after building the app.
-This architecture is used to ensure that regardless of the network a user's wallet is connected to when visiting the dGrants site, they are shown the correct set of grants and can populate their cart.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-You can now build the app with:
+### `npm run build`
 
-```sh
-# Install packages
-yarn install
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-# Run in development mode (run this fom the repo root)
-yarn dev
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-# Compiles and minifies for production
-yarn build
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-# Format files
-yarn prettier
+### `npm run eject`
 
-# Run linter
-yarn lint
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### Run your unit tests and end-to-end tests (not yet setup)
-yarn test:unit
-yarn test:e2e
-```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### Troubleshooting
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-If you send a transaction in MetaMask against your local node, then restart your local node, your next transaction will use a nonce that is too large and your transaction will fail. To fix this, go to MetaMask Settings > Advanced > Reset Account. This will reset the MetaMask nonce counter so it matches what Hardhat is expecting.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-If the app loads and the block number is zero after connecting your wallet, there's likely a `CALL_EXCEPTION` in the console. Simply refresh the page and this should be fixed.
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
