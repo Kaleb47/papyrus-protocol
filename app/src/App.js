@@ -5,6 +5,32 @@ import ReactDOM from 'react-dom';
 import landingImg from './landing.jpg'
 import {ReactComponent as Searchicon} from './imgs/search-icon.svg';
 
+// libraries for connecting wallet with web3
+import "@rainbow-me/rainbowkit/styles.css";
+import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import { configureChains, createClient, WagmiConfig } from "wagmi";
+import { mainnet, polygon, optimism,arbitrum } from 'wagmi/chains'
+import { alchemyProvider } from "wagmi/providers/alchemy";
+import { publicProvider } from "wagmi/providers/public";
+import { ConnectBtn } from "./connect_btn.js";
+
+const { chains, provider } = configureChains(
+  [mainnet, polygon, optimism, arbitrum],
+  [alchemyProvider({ alchemyId: process.env.ALCHEMY_ID }), publicProvider()]
+);
+
+const { connectors } = getDefaultWallets({
+  appName: "Papyri DAO",
+  chains
+});
+
+const wagmiClient = createClient({
+  autoConnect: true,
+  connectors,
+  provider
+});
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -33,7 +59,7 @@ class Nav extends React.Component {
         <span className='nav__title'>Papyri DAO</span>
         <span className='nav__account'>
         <span className='nav__account__balance'>10.0 USDC</span>
-        <span className='nav__account__wallet'>M</span>
+        <span> <ConnectWallet /> </span>
       </span>
     </div>
     );
@@ -80,5 +106,16 @@ class SearchBar extends React.Component {
     );
   }
 }
+
+function ConnectWallet() {
+  return (
+    <WagmiConfig client={wagmiClient}>
+      <RainbowKitProvider chains={chains}>
+        <ConnectBtn />
+      </RainbowKitProvider>
+    </WagmiConfig>
+  );
+}
+
 
 export default App;
