@@ -1,6 +1,6 @@
 <template>
   <div class="px-4 md:px-12">
-    <div class="py-6 md:py-8 border-b border-grey-100">
+    <div class="py-6 md:py-8 border-b border-white-100">
       <!-- 3 row even grid that collapse to 1 row grid on mobile -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-2">
         <div>
@@ -23,7 +23,7 @@
                 >
               </div>
               <!--blocknumber-->
-              <div class="text-grey-400">#{{ contribution.blockNumber }}</div>
+              <div class="text-white-400">#{{ contribution.blockNumber }}</div>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@
           >
             {{ contribution.txHash }}
           </a>
-          <div class="text-grey-400">Success</div>
+          <div class="text-white-400">Success</div>
         </div>
 
         <!-- donation -->

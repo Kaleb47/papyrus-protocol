@@ -12,16 +12,16 @@
         <ul v-for="(item, index) in items" :key="item.label">
           <!-- nav item -->
           <li @click="item?.action" class="group">
-            <!-- if item have a menu show label in grey with a : at end -->
-            <span v-if="item.menu" class="text-grey-400 group-hover:text-grey-500">{{ item.label + ':' }}</span>
+            <!-- if item have a menu show label in white with a : at end -->
+            <span v-if="item.menu" class="text-white-400 group-hover:text-white-500">{{ item.label + ':' }}</span>
 
             <!-- else just show the label-->
-            <span v-else :class="active == index ? 'border-b pb-1' : 'text-grey-400 group-hover:text-grey-500'">{{
+            <span v-else :class="active == index ? 'border-b pb-1' : 'text-white-400 group-hover:text-white-500'">{{
               item.label
             }}</span>
 
             <!-- if item have a counter -->
-            <span v-if="item.counter" class="ml-2 text-grey-300">({{ item.counter }})</span>
+            <span v-if="item.counter" class="ml-2 text-white-300">({{ item.counter }})</span>
 
             <!-- if item have a item tag -->
             <span v-if="item.tag" class="ml-2">{{ item.tag }}</span>
@@ -34,10 +34,10 @@
                   :key="menuItem.label"
                   :class="
                     menuItem.separator
-                      ? 'border-b border-grey-400 my-4'
+                      ? 'border-b border-white-400 my-4'
                       : item.active == menuIndex
-                      ? 'text-grey-500'
-                      : 'hover:text-grey-500 cursor-pointer'
+                      ? 'text-white-500'
+                      : 'hover:text-white-500 cursor-pointer'
                   "
                   @click="menuItem?.action"
                 >
@@ -76,7 +76,7 @@ export default defineComponent({
 
 <style scoped>
 section {
-  @apply px-4 md:px-12 py-8 border-b border-grey-100;
+  @apply px-4 md:px-12 py-8 border-b border-white-100;
 }
 
 li {
@@ -84,6 +84,6 @@ li {
 }
 
 .menu {
-  @apply border border-grey-400 p-6 pr-10 bg-white text-grey-400 flex flex-col gap-y-2 uppercase font-medium;
+  @apply border border-white-400 p-6 pr-10 bg-white text-white-400 flex flex-col gap-y-2 uppercase font-medium;
 }
 </style>

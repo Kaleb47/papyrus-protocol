@@ -39,7 +39,7 @@
     <figcaption class="mt-4">
       <div class="truncate">{{ name }}</div>
       <div>
-        <span class="text-grey-400"
+        <span class="text-white-400"
           >by
           <a
             class="link ml-1"
@@ -51,7 +51,7 @@
         </span>
       </div>
       <div>
-        <span class="text-grey-400">Raised:</span><span class="ml-1">{{ raised }}</span>
+        <span class="text-white-400">Raised:</span><span class="ml-1">{{ raised }}</span>
       </div>
     </figcaption>
   </figure>

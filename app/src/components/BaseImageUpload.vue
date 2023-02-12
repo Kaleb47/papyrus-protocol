@@ -6,7 +6,7 @@
   <!-- Image Upload -->
   <template v-else-if="!logoURI || !isValid">
     <div class="block">
-      <label class="w-100 flex flex-col bg-white items-center px-6 py-8 border border-grey-400 cursor-pointer">
+      <label class="w-100 flex flex-col bg-white items-center px-6 py-8 border border-white-400 cursor-pointer">
         <input type="file" @input="onInput" class="hidden" />
         <div class="flex py-12 px-0 md:px-12 gap-x-12">
           <div
@@ -16,15 +16,15 @@
               items-center
               justify-center
               h-24
-              border border-grey-400
+              border border-white-400
               p-12
               cursor-pointer
-              hover:border-grey-500
+              hover:border-white-500
             "
           >
             <ImportIcon class="icon icon-small icon-primary" />
           </div>
-          <div class="text-grey-400 flex items-center">
+          <div class="text-white-400 flex items-center">
             {{ errorMsg }}
           </div>
         </div>

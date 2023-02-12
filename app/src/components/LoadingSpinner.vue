@@ -1,7 +1,7 @@
 <template>
   <div>
     <img src="/src/assets/spinner.svg" />
-    <span>{{ text }}</span>
+    <span style="color:#fff">{{ text }}</span>
   </div>
 </template>
 

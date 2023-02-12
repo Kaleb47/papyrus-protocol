@@ -38,16 +38,16 @@
             absolute
             z-10
             w-full
-            bg-white
+            bg-grey
             text-left
             overflow-auto
             border border-grey-400
             p-5
             font-medium
-            bg-white
+            bg-grey
             text-grey-400
             uppercase
-            whitespace-nowrap
+            greyspace-nowrap
           "
         >
           <ListboxOption

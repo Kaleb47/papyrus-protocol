@@ -1,8 +1,8 @@
 <template>
-  <div v-if="!isSupportedNetwork" class="px-4 md:px-12 py-8 bg-grey-200 text-white">
+  <div v-if="!isSupportedNetwork" class="px-4 md:px-12 py-8 bg-grey-200 text-grey">
     <div class="block md:flex gap-x-8 items-center">
       <div>
-        <p class="text-white bg-pink inline">
+        <p class="text-grey bg-pink inline">
           Connect your wallet to {{ supportedNetworkName }} to enable full functionality of this app.
         </p>
       </div>

@@ -1,6 +1,6 @@
 <template>
   <!-- grid sm:1col md:2col -->
-  <section class="border-b border-grey-100 grid grid-cols-1 md:grid-cols-2">
+  <section class="border-b border-white-100 grid grid-cols-1 md:grid-cols-2">
     <!--grid:left (img)-->
     <figure class="aspect-w-16 aspect-h-9 shadow-light">
       <LogoPtrImage
@@ -15,11 +15,11 @@
       <!-- raised amount, contract, donate button -->
       <article>
         <!-- raised -->
-        <div><span class="text-grey-400 mr-4">Raised:</span>{{ totalRaised }}</div>
+        <div><span class="text-white-400 mr-4">Raised:</span>{{ totalRaised }}</div>
 
         <!-- Donation Address -->
         <div>
-          <span class="text-grey-400 mr-4">Donation Address:</span>
+          <span class="text-white-400 mr-4">Donation Address:</span>
           <a class="link" :href="getEtherscanUrl(payoutAddress, 'address')" target="_blank" rel="noopener noreferrer">{{
             formatAddress(payoutAddress)
           }}</a>
@@ -27,7 +27,7 @@
 
         <!-- Owner -->
         <div>
-          <span class="text-grey-400 mr-4">Owner:</span>
+          <span class="text-white-400 mr-4">Owner:</span>
           <a class="link" :href="getEtherscanUrl(grant.owner, 'address')" target="_blank" rel="noopener noreferrer">{{
             formatAddress(grant.owner)
           }}</a>
@@ -52,14 +52,14 @@
         <div v-for="(round, index) in roundDetails" :key="index" class="mt-2">
           <!--round-->
           <div>
-            <span class="text-grey-400 mr-4">Matching:</span>
+            <span class="text-white-400 mr-4">Matching:</span>
             <span>{{ round.matching || '...' }} {{ round.matchingToken.symbol }}</span>
             <span>, {{ round.name }}</span>
           </div>
 
           <!--matching-->
           <div>
-            <span class="text-grey-300 italic">
+            <span class="text-white-300 italic">
               10 {{ roundDetails[0] ? roundDetails[0].donationToken.symbol : '' }} ≈ {{ round.prediction10 }}
               {{ round.matchingToken.symbol }}, 100 {{ roundDetails[0] ? roundDetails[0].donationToken.symbol : '' }} ≈
               {{ round.prediction100 }} {{ round.matchingToken.symbol }}

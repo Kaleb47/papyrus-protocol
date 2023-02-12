@@ -9,7 +9,7 @@
       exact
       class="group no-underline flex items-center"
     >
-      <span class="uppercase font-medium text-grey-400 truncate group-hover:text-grey-500">{{ link.displayName }}</span>
+      <span class="uppercase font-medium text-white-400 truncate group-hover:text-white-500">{{ link.displayName }}</span>
       <ArrowRightSmallIcon class="icon-small icon-primary" />
     </router-link>
   </div>

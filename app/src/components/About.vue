@@ -5,7 +5,7 @@
     @click="emitEvent('toggleAbout')"
   >
     <div class="px-4 md:px-12 m-auto bg-white">
-      <div class="border-grey-500 border-2 px-4 md:px-12 relative" @click.stop>
+      <div class="border-500 border-2 px-4 md:px-12 relative" @click.stop>
         <!-- close icon-->
         <div class="absolute top-6 right-6">
           <XIcon @click="emitEvent('toggleAbout')" class="icon icon-primary cursor-pointer" />
@@ -13,69 +13,24 @@
 
         <!-- dGrants -->
         <div class="mt-8">
-          <h1 class="font-medium"><span class="text-teal">d</span>Grants</h1>
+          <h1 class="font-medium">Biblio Tech</h1>
         </div>
 
         <!-- ToDo. build version -->
-        <div class="mt-2">build {{ packagejson.version }}</div>
+        <div class="mt-2">build 0.0.1</div>
 
         <!-- Team -->
         <div class="mt-16">
-          <span>Dezentralize Gitcoin – Workstream Team: </span>
-          <span :key="contributor.login" v-for="(contributor, index) in contributors">
-            <span>
-              <a :href="contributor.html_url" class="link" target="_blank" rel="noreferrer noopener">
-                {{ contributor.login }}
-              </a>
-            </span>
-            <span v-if="index !== contributors.length - 1">, </span><span v-else>.</span>
-          </span>
+          <span>Workstream Team: </span>
+          <div  style="margin:3vw">
+            Aamina, Fiona, Jeffery, Kaleb, Luciano, Mina Eskandar
+          </div>
         </div>
 
         <!-- ToDo. Link to the real dGrant grant -->
-        <div class="mt-16 flex flex-wrap gap-4">
-          <router-link
-            v-if="dgrantsGrantID && dgrantsGrantID !== 'false'"
-            :to="`/dgrants/${dgrantsGrantID}`"
-            @click="emitEvent('toggleAbout')"
-          >
-            <button class="btn">
-              <span>donate to <span class="text-teal">d</span>grants</span>
-            </button>
-          </router-link>
-
-          <a href="https://github.com/dcgtc" target="_blank" rel="noreferrer noopener">
-            <button class="btn">
-              <GithubIcon />
-              <span>Github</span>
-            </button></a
-          >
-
-          <a href="https://twitter.com/gitcoindao" target="_blank" rel="noreferrer noopener">
-            <button class="btn">
-              <TwitterIcon />
-              <span>Twitter</span>
-            </button></a
-          >
-        </div>
-
+        
         <!-- license & support link -->
-        <div class="mt-8 mb-8 block md:flex items-center gap-x-8 space-y-2 md:space-y-0">
-          <div>
-            <a
-              class="link"
-              href="https://github.com/dcgtc/dgrants/blob/main/LICENSE"
-              target="_blank"
-              rel="noreferrer noopener"
-              >Licensed under AGPL-3.0 License</a
-            >
-          </div>
-          <div class="ml-auto">
-            <a class="link" href="https://support.gitcoin.co" target="_blank" rel="noreferrer noopener"
-              >Help & Support</a
-            >
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>

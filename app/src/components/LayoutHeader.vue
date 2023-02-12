@@ -1,15 +1,17 @@
 <template>
-  <header
-    class="bg-white flex items-center gap-x-4 md:gap-x-8 h-28 mx-4 text-grey-400 justify-between"
+   <header
+    class="bg-white flex items-center h-28 text-grey-400 justify-between"
     aria-label="Top"
+    style="background-color: #3b3939;, color: #fff !important; "
+    
   >
     <div class="relative group">
       <div class="font-medium flex items-center h-14 cursor-pointer">
         <router-link to="/">
-          <img class="icon" src="/logo.svg" alt="dGrant logo" />
+          <span style="font-family: fantasy; color: #fff;fontsize:5vh;">Biblio Tech</span>
         </router-link>
-        <div class="ml-4 hidden md:block">
-          <span class="text-teal">d</span><span class="text-grey-500">GRANTS</span>
+        <div class="ml-4  md:block">
+         <span style="color: #fff;fontsize:5vh;">GRANTS</span>
         </div>
         <div class="ml-1">
           <ArrowBottomIcon class="icon-small icon-primary" />
@@ -56,9 +58,9 @@
 
     <div class="flex items-center justify-between gap-x-4">
       <router-link :to="{ name: 'Cart' }" class="flex items-center gap-x-2 h-14 group cursor-pointer pr-2">
-        <div class="hidden md:block group-hover:text-grey-500">Cart</div>
+        <div class=" md:block group-hover:text-grey-500" style="color: #fff;fontsize:5vh;">Cart</div>
         <CartIcon class="icon-small icon-primary" />
-        <div class="group-hover:text-grey-500">{{ cartItemsCount }}</div>
+        <div class="group-hover:text-grey-500" style="color: #fff;fontsize:5vh;">{{ cartItemsCount }}</div>
       </router-link>
       <div class="border-r border-grey-100 h-14"></div>
 
@@ -66,13 +68,13 @@
         <div class="group relative">
           <div class="flex items-center h-16 gap-x-2 space-x-2 group cursor-pointer">
             <div class="hidden md:block group-hover:text-grey-500">
-              <span>{{ userDisplayName }}</span>
+              <span style="color: #fff;fontsize:5vh;">{{ userDisplayName }}</span>
             </div>
-            <div class="flex items-center">
+            <div class="flex items-center" style="color: #fff;fontsize:5vh;">
               <figure>
                 <Jazzicon :address="userAddress" :key="userAddress" :width="38" />
               </figure>
-              <ArrowBottomIcon class="icon-small icon-primary" />
+              <ArrowBottomIcon style="color: #fff;fontsize:5vh;" class="icon-small icon-primary" />
             </div>
           </div>
           <!-- menu-->
@@ -94,6 +96,7 @@
               text-left
               whitespace-nowrap
             "
+            style="color: #fff;fontsize:5vh;"
           >
             <div>{{ userDisplayName }}</div>
 
@@ -106,21 +109,24 @@
               active-class="font-medium text-grey-500"
               exact
               class="hover:text-grey-500"
+              style="color: #fff;fontsize:5vh;"
             >
               {{ link.label }}
             </router-link>
 
-            <div class="border-b border-grey-400 my-4"></div>
+            <div class="border-b border-grey-400 my-4" style="color: #fff;fontsize:5vh;"></div>
 
             <button
               @click="changeWallet"
               class="cursor-pointer hover:text-grey-500 flex no-underline uppercase font-medium"
+              style="color: #fff;fontsize:5vh;"
             >
               change wallet
             </button>
             <button
               @click="disconnectWallet"
               class="cursor-pointer hover:text-grey-500 flex no-underline uppercase font-medium"
+              style="color: #fff;fontsize:5vh;"
             >
               disconnect wallet
             </button>
@@ -130,13 +136,15 @@
 
       <!-- connect wallet -->
       <div v-else @click="connectWallet" class="flex items-center h-14 gap-x-2 group cursor-pointer ml-auto">
-        <div class="hidden md:block group-hover:text-grey-500">Connect</div>
+        <div class="hidden md:block group-hover:text-grey-500" style="color: #fff;fontsize:5vh;">Connect</div>
         <div>
           <ConnectWalletIcon class="icon icon-primary" />
         </div>
       </div>
     </div>
   </header>
+  <img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg" class="bg__img">
+
 </template>
 
 <script lang="ts">

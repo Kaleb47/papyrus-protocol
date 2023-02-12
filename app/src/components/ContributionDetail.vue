@@ -1,7 +1,7 @@
 <template>
   <template v-if="contributions.length > 0">
     <section v-for="contribution in contributions" :key="contribution.txHash" class="px-4 md:px-12">
-      <div class="py-4 md:py-6 lg:py-8 border-b border-grey-100">
+      <div class="py-4 md:py-6 lg:py-8 border-b border-white-100">
         <div class="grid grid-cols-12 gap-x-8 gap-y-4 items-center">
           <!-- grand image + grant description + optional grant round -->
           <article class="col-span-12 md:col-span-6 lg:col-span-5">
@@ -53,7 +53,7 @@
               </div>
               <!-- amount -->
               <div>
-                <div class="text-grey-400">
+                <div class="text-white-400">
                   {{ formatNumber(contribution.amount, 4) }}
                   {{ contribution.donationToken?.symbol }}
                 </div>
@@ -66,7 +66,7 @@
             <!-- subgrid -->
             <div class="flex justify-between lg:block lg:text-right">
               <!-- utc-time -->
-              <div class="text-grey-400">{{ contribution.createdAt }}</div>
+              <div class="text-white-400">{{ contribution.createdAt }}</div>
               <!-- tx-hash -->
               <div class="truncate">
                 <a :href="getEtherscanUrl(contribution.txHash || '', 'tx')" class="link" target="_blank"

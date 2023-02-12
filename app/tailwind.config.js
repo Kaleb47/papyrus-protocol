@@ -41,6 +41,11 @@ module.exports = {
       'grey-300': '#A7A2B6',
       'grey-400': '#757087',
       'grey-500': '#0E0333',
+      'white-100': '#ffffff',
+      'white-200': '#ffffff',
+      'white-300': '#ffffff',
+      'white-400': '#ffffff',
+      'white-500': '#ffffff',
     },
     stroke: {
       transparent: 'transparent',
@@ -53,6 +58,11 @@ module.exports = {
       'grey-300': '#A7A2B6',
       'grey-400': '#757087',
       'grey-500': '#0E0333',
+      'white-100': '#ffffff',
+      'white-200': '#ffffff',
+      'white-300': '#ffffff',
+      'white-400': '#ffffff',
+      'white-500': '#ffffff',
     },
     strokeWidth: {
       1: '1',

@@ -5,18 +5,7 @@
       <h1>Decentralized Grants</h1>
 
       <!-- description -->
-      <p class="italic mt-8 mx-auto max-w-4xl text-grey-400">
-        Facilitating open source developers creating grants to collect contributions in a decentralized way. Read more
-        about <router-link to="/dgrants" class="link">Grants</router-link> and
-        <router-link to="/dgrants/rounds" class="link">Rounds</router-link> in the
-        <a
-          href="https://github.com/dcgtc/dgrants/wiki/dGrants-FAQ"
-          target="_blank"
-          rel="noreferrer noopener"
-          class="link"
-          >FAQ</a
-        >
-      </p>
+      
 
       <!-- create grant -->
       <div class="flex mt-8 justify-center">
@@ -119,16 +108,10 @@
 
   <!--------------- GRANTS INTRO --------------->
   <section class="px-4 md:px-12 pt-8">
-    <h1>Grants</h1>
-    <p class="italic text-grey-400">
+    <h1 class="text-white-400">Grants</h1>
+    <p class="italic text-white-400">
       Grants are a facility for projects to receive donations to their cause.
-      <a
-        href="https://github.com/dcgtc/dgrants/wiki/dGrants-FAQ#q-what-is-a-grant"
-        target="_blank"
-        rel="noreferrer noopener"
-        class="link"
-        >Learn more</a
-      >
+      
     </p>
   </section>
 
@@ -141,7 +124,7 @@
       <router-link to="/dgrants" class="ml-auto">
         <div class="flex items-center gap-x-2 cursor-pointer group">
           <ArrowRightIcon class="icon icon-primary icon-small" />
-          <span class="text-grey-400 group-hover:text-grey-500">All Grants</span>
+          <span class="text-white-400 group-hover:text-white-500">All Grants</span>
         </div>
       </router-link>
     </div>
